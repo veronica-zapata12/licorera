@@ -1,17 +1,18 @@
-package com.ceiba.licorera.TestDominio.Factura;
+package com.ceiba.licorera.TestAplicacion.Comando.ComndoFacturaTest;
 
+import com.ceiba.licorera.aplicacion.comando.ComandoFactura;
 import com.ceiba.licorera.dominio.modelo.DetalleFactura;
-import com.ceiba.licorera.dominio.modelo.Factura;
 import com.ceiba.licorera.dominio.modelo.Producto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FacturaDataBuilder {
+public class ComandoFacturaDataBuider {
     private static final Long ID = 1L;
     private Long id;
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
-    public FacturaDataBuilder() {
+
+    public ComandoFacturaDataBuider() {
         this.id = ID;
         Producto producto1 = new Producto( 1L,"vodka", 55000.0);
         int cantidad1 = 3;
@@ -23,7 +24,8 @@ public class FacturaDataBuilder {
         detalleFacturas.add(detalleFactura2);
     }
 
-    public Factura build() {
-        return new Factura(this.id, this.detalleFacturas);
+    public ComandoFactura build() {
+        return new ComandoFactura(this.id, this.detalleFacturas);
     }
 }
+
