@@ -1,0 +1,34 @@
+<div class="card-header">
+<form class="form-horizontal">
+        <h3 class="center-align">Detalles de la factura</h3>
+        <div>
+                <h4 style="padding-left: 20em">
+                        <a [routerLink]="['/listarfacturas']" class="btn-small">&laquo; volver a lista de facturas</a>
+                      </h4>
+            <table class="table table-striped table-hover table-bordered my-2" *ngIf="(detalles && detalles.length)">
+                <thead>
+                    <tr>
+    
+                        <th>cantidad</th>
+                        <th>producto</th>
+                        <th>valor producto</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr *ngFor="let detalle of detalles">
+                        <td>{{detalle.cantidad}}</td>
+                        <td>{{detalle.producto.nombre}}</td>    
+                        <td>{{detalle.producto.valor}}</td>    
+
+                    </tr>
+                </tbody>
+            </table>
+    
+    
+    
+        </div>
+    
+    
+    </form>
+</div>

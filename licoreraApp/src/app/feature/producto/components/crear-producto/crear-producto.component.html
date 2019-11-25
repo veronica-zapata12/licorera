@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<div class="card-header">
+<h1 class="center-align">Agregar productos</h1>
+</div>
+<div>
+<div class="card-body">
+<form class="form-horizontal" #form="ngForm">
+  <div class="row">
+
+    <div class="input-field col s3">
+      <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre" required #nombre="ngModel">
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        Nombre es requerido
+
+
+      </div>
+    </div>
+    <div class="input-field col s3">
+      <label for="valor" class="col-form-label col-sm-2">valor</label>
+      <input type="number" class="form-control" [(ngModel)]="producto.valor" name="valor" required #valor="ngModel">
+      <div class="alert alert-danger" *ngIf="valor.invalid && (valor.dirty || valor.touched)">
+        Valor es requerido
+      </div>
+    </div>
+    <div class="center-align input-field col s3">
+      <button class="btn btn-primary" type="submit" [disabled]="nombre.invalid || valor.invalid"
+        (click)="OnSubmit(form)">Guardar</button>
+    </div>
+  </div>
+  <h4 class="card-title">
+      <a [routerLink]="['/listarproductos']" class="btn btn-light btn-xs"> Ir a lista productos &raquo;</a>
+    </h4>
+</form>
+</div>
+</div>
+</html>

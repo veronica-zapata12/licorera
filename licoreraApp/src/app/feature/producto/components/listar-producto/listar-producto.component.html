@@ -1,0 +1,36 @@
+
+<div class="card-header">
+<h1 class="center-align">Lista de productos</h1>
+<div>
+<h4  style="padding-left: 21em">
+    <a [routerLink]="['/agregarproducto']" class="btn btn-light btn-xs">&laquo; Volver a agregar productos</a>
+  </h4>
+<body>
+
+  <p *ngIf="!(producto && producto.length)">
+    no existen registros
+  </p>
+
+  <table class="table table-striped table-hover table-bordered my-3" *ngIf="(producto && producto.length)">
+    <thead>
+      <tr>
+        
+        <th>nombre </th>
+        <th>valor</th>
+       
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let producto of producto ">
+       
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.valor}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</div>
+</div>

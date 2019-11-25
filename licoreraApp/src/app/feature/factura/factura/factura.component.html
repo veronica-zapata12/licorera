@@ -1,0 +1,51 @@
+
+<div class="card-header">
+        <div style="text-align:left;padding-left: 30em">
+                <h1><span style="color:gray;"></span></h1> <iframe
+                  src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FBogota"
+                  width="100%" height="90" frameborder="0"></iframe>
+              </div>
+        <h1 class="center-align" >Nueva factura</h1>
+        <h4  style="padding-left: 21em">
+            <a [routerLink]="['/listarfacturas']" class="btn btn-light btn-xs">&raquo; ir a lista facturas</a>
+          </h4>
+          <textarea  style="max-width: 350px;color:red"  >por compras superiores a 300000 se hace un descuento del 10% en el total</textarea>
+          <textarea  style="max-width: 350px;color:red"  >no se pueden realizar facturas antes de las 11 AM</textarea>
+        </div>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="añadir producto" aria-label="productos" matInput
+            [formControl]="autocompleteControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="mostrarNombre"
+            (optionSelected)="selecionarProducto($event)">
+            <mat-option *ngFor="let producto of productosFiltrados | async" [value]="producto">
+                {{producto.nombre}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <table class="table striped table-hover table-sm">
+        <thead>
+            <tr>
+                <th>producto</th>
+                <th>precio</th>
+                <th>cantidad</th>
+                <th>subtotal</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detalle of factura.detalleFacturas">
+                <td>{{detalle.producto.nombre}}</td>
+                <td>{{detalle.producto.precio}}</td>
+                <td><input type="number" value="{{detalle.cantidad}}" class="from-control col-sm-4"
+                        (change)="actualizarCantidad(detalle.producto.nombre, $event)"></td>
+                <td>{{detalle.calcularSubTotal()}}</td>
+                <td><button class="btn btn-danger btn-sm" type="button"
+                    (click)="eliminarItemFactura(detalle.producto.nombre)">x</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h5 class="float-right">Total <span class="badge badge-secundary">{{calcularTotal()}}</span></h5>
+    <input type="submit" (click)="crear()" value="crear factura" class="btn btn-secondary">
+</form>
