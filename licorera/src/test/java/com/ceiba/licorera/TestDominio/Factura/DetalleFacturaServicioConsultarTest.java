@@ -39,4 +39,20 @@ public class DetalleFacturaServicioConsultarTest {
         //Assert
         Assertions.assertFalse(resultado.isEmpty());
     }
+    @Test
+    void getters(){
+        //arrange
+        this.idfactura = ID;
+        ProductoDto producto = new ProductoDto(1L, "vodka", 55000.0);
+        int cantidad = 2;
+        DetallefacturaDto detalleFactura = new DetallefacturaDto(cantidad, producto);
+       //act-assert
+        Assertions.assertNotNull(detalleFactura.getCantidad());
+        Assertions.assertNotNull(detalleFactura.getProducto());
+
+
+
+    }
+
+
 }

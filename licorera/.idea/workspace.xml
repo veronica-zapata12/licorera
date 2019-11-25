@@ -81,27 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ControladorFacturaTest.crearFactura">
-    <configuration name="ControladorFacturaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorFactura.ControladorFacturaTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.DetalleFacturaServicioConsultarTest.getters">
     <configuration name="ControladorFacturaTest.crearFactura" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -122,12 +102,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ControladorFacturaTest.listarFacturas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DetalleFacturaServicioConsultarTest.getters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorFactura.ControladorFacturaTest.listarFacturas&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.DetalleFacturaServicioConsultarTest.getters&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -142,12 +122,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ControladorProductoTest.listarpornombres" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FacturaServicioConsultarTest.getters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest.listarpornombres&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest.getters&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,12 +142,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ControladorProductoTest.listarproductos" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ProductoServicioConsultarProductos.Setter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest.listarproductos&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos.Setter&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductoServicioConsultarProductos.getter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos.getter&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -205,19 +205,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
-      <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
-      <item itemvalue="Gradle.ControladorFacturaTest" />
-      <item itemvalue="Gradle.ControladorFacturaTest.listarFacturas" />
       <item itemvalue="Gradle.ControladorFacturaTest.crearFactura" />
+      <item itemvalue="Gradle.ProductoServicioConsultarProductos.Setter" />
+      <item itemvalue="Gradle.FacturaServicioConsultarTest.getters" />
+      <item itemvalue="Gradle.ProductoServicioConsultarProductos.getter" />
+      <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.getters" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.getters" />
+        <item itemvalue="Gradle.FacturaServicioConsultarTest.getters" />
+        <item itemvalue="Gradle.ProductoServicioConsultarProductos.getter" />
+        <item itemvalue="Gradle.ProductoServicioConsultarProductos.Setter" />
         <item itemvalue="Gradle.ControladorFacturaTest.crearFactura" />
-        <item itemvalue="Gradle.ControladorFacturaTest.listarFacturas" />
-        <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
-        <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
-        <item itemvalue="Gradle.ControladorFacturaTest" />
       </list>
     </recent_temporary>
   </component>

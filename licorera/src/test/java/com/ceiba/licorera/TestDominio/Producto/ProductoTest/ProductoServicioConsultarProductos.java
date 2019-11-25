@@ -39,4 +39,28 @@ public class ProductoServicioConsultarProductos {
         //assert
         //Assertions.assertFalse(resultado ==null);
     }
+    @Test
+    void getter(){
+        //arrange
+        ProductoDto producto = new ProductoDto(1L, "vodka", 55000.0);
+       //act-assert
+        Assertions.assertNotNull(producto.getNombre());
+        Assertions.assertNotNull(producto.getIdProducto());
+        Assertions.assertNotNull(producto.getValor());
+    }
+    @Test
+    void Setter(){
+        //arrange
+        ProductoDto producto = new ProductoDto(1L, "vodka", 55000.0);
+        //act
+        producto.setNombre("ron");
+        producto.setIdProducto(100L);
+        producto.setValor(65000.0);
+        //assert
+        Assertions.assertEquals("ron",producto.getNombre());
+        Assertions.assertEquals(100L,producto.getIdProducto());
+        Assertions.assertEquals(65000.0,producto.getValor());
+
+
+    }
 }

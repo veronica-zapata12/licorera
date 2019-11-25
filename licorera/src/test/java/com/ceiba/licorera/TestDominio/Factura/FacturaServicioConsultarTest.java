@@ -61,8 +61,23 @@ public class FacturaServicioConsultarTest {
         //Assert
         Assertions.assertFalse(resultado ==null);
 
-
-
-
     }
+    @Test
+    void getters(){
+        this.idfactura = 1L;
+        ProductoDto producto1 = new ProductoDto(1L, "vodka", 55000.0);
+        int cantidad1 = 2;
+        DetallefacturaDto detalleFactura = new DetallefacturaDto(cantidad1, producto1);
+        detalleFacturas.add(detalleFactura);
+        ProductoDto producto2 = new ProductoDto(1L, "ron", 40000.0);
+        int cantidad2 = 2;
+        DetallefacturaDto detalleFactura2 = new DetallefacturaDto(cantidad2, producto2);
+        detalleFacturas.add(detalleFactura2);
+        FacturaDto facturaDto = new FacturaDto(this.idfactura, this.detalleFacturas);
+        Assertions.assertNotNull(facturaDto.getId());
+        Assertions.assertNotNull(facturaDto.getDetalleFacturas());
+        Assertions.assertNull(facturaDto.getFecha());
+        Assertions.assertNotNull(facturaDto.getTotal());
+    }
+
 }
