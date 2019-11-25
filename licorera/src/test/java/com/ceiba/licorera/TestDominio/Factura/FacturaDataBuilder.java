@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FacturaDataBuilder {
-    private static final Long ID = 1L;
+    private static final Long ID = 100L;
     private Long id;
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
     public FacturaDataBuilder() {

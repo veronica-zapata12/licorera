@@ -1,6 +1,5 @@
 package com.ceiba.licorera.TestDominio.Factura;
 
-import com.ceiba.licorera.TestDominio.BasePrueba;
 import com.ceiba.licorera.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.licorera.dominio.excepcion.ExcepcionGeneral;
 import com.ceiba.licorera.dominio.modelo.Factura;
@@ -20,10 +19,16 @@ public class FacturaServicioCrearTest {
             //Arrange
             Factura factura= new FacturaDataBuilder().build();
             RepositorioFactura repositorioFactura= mock(RepositorioFactura.class);
-            Mockito.when(repositorioFactura.existe(Mockito.any())).thenReturn(true);
+            Mockito.when(repositorioFactura.existe(Mockito.any())).thenReturn(false);
             ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
-            //Act
-            BasePrueba.assertThrows(() ->servicioCrearFactura.ejecutar(factura),ExcepcionDuplicidad.class,"la factura ya existe");
+        try {
+            //act
+            servicioCrearFactura.ejecutar(factura);
+
+        } catch (ExcepcionGeneral e) {
+            Assertions.fail("error en la creacion del producto");
+        }
+
     }
 
     @Test

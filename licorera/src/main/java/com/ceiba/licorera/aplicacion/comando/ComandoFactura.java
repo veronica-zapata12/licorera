@@ -25,6 +25,9 @@ public class ComandoFactura {
         return total;
     }
 
+    public void setTotal(Double total) {
+        this.total = total;
+    }
 
     public Date getFecha() {
         return fecha;

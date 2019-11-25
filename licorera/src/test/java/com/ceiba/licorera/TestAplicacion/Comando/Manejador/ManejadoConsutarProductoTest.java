@@ -1,6 +1,6 @@
 package com.ceiba.licorera.TestAplicacion.Comando.Manejador;
 
-import com.ceiba.licorera.TestInfraestructura.controladorProducto.controladorProductoDataBuider.ComandoProductoDataBuilder;
+import com.ceiba.licorera.TestInfraestructura.controladorProducto.ComandoProductoDataBuilder;
 import com.ceiba.licorera.aplicacion.comando.ComandoProducto;
 import com.ceiba.licorera.aplicacion.comando.manejador.producto.ManejadorConsultarProductos;
 import com.ceiba.licorera.dominio.servicio.producto.ServicioConsultarProductos;

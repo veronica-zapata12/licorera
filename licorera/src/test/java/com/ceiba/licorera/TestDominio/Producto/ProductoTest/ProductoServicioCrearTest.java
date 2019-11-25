@@ -42,7 +42,6 @@ public class ProductoServicioCrearTest {
         try {
             //act
             servicioCrearProducto.ejecutar(producto);
-            Assertions.assertTrue(true);
 
         } catch (ExcepcionGeneral e) {
             Assertions.fail("error en la creacion del producto");
