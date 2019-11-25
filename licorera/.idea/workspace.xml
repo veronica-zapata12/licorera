@@ -35,6 +35,8 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="XSLT Stylesheet" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -46,21 +48,25 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="yaml" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/ceiba/licorera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\java\com\ceiba\licorera\TestInfraestructura" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\java\com\ceiba\licorera" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ceiba.licorera" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test" />
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\resources" />
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\java\com\ceiba\licorera" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test" />
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\java" />
+      <recent name="C:\Users\veronica.zapata\Desktop\Proyectos\licorera\src\test\java\com\ceiba\licorera\TestInfraestructura" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -75,13 +81,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ControladorProductoTest">
+  <component name="RunManager" selected="Gradle.ControladorProductoTest.creaProducto">
     <configuration name="ControladorProductoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.controladorProducto.ControladorProductoTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ControladorProductoTest.creaProducto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.controladorProducto.ControladorProductoTest.creaProducto&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -156,26 +182,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ManejadorCrearproductoTest.ejecutar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearproductoTest.ejecutar&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="run" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,19 +205,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.ManejadorCrearproductoTest.ejecutar" />
       <item itemvalue="Gradle.ManejadoConsutarProductoTest.consultarProducto" />
       <item itemvalue="Gradle.ManejadorCrearFacturaTest.crear" />
       <item itemvalue="Gradle.ManejadorConsultarFacturaTest.consultar" />
       <item itemvalue="Gradle.ControladorProductoTest" />
+      <item itemvalue="Gradle.ControladorProductoTest.creaProducto" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ControladorProductoTest.creaProducto" />
         <item itemvalue="Gradle.ControladorProductoTest" />
         <item itemvalue="Gradle.ManejadorConsultarFacturaTest.consultar" />
         <item itemvalue="Gradle.ManejadorCrearFacturaTest.crear" />
         <item itemvalue="Gradle.ManejadoConsutarProductoTest.consultarProducto" />
-        <item itemvalue="Gradle.ManejadorCrearproductoTest.ejecutar" />
       </list>
     </recent_temporary>
   </component>
