@@ -60,6 +60,13 @@ pipeline {
         //sh 'gradle --b ./build.gradle test'
       }
     }
+
+
+stage('Integration Tests') {
+steps {
+echo "------------>Integration Tests<------------"
+}
+}
     stage('Static Code Analysis') {
       steps {
         echo '------------>Análisis de código estático<------------'
