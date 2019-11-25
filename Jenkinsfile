@@ -61,12 +61,6 @@ pipeline {
       }
     }
 
-
-stage('Integration Tests') {
-steps {
-echo "------------>Integration Tests<------------"
-}
-}
     stage('Static Code Analysis') {
       steps {
         echo '------------>Análisis de código estático<------------'
