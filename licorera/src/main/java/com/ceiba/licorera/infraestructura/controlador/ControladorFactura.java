@@ -31,9 +31,4 @@ public class ControladorFactura {
         return this.manejadorConsultarFacturas.ejecutar();
     }
 
-    @GetMapping(value = "/{id}")
-    public FacturaDto buscarporid(@PathVariable Long id) {
-        return manejadorConsultarFacturas.buscarporid(id);
-    }
-
 }

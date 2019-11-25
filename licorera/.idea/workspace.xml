@@ -75,13 +75,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ManejadorConsultarFacturaTest.consultar">
-    <configuration name="ComandoFacturaTest.construircomando" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ControladorProductoTest">
+    <configuration name="ControladorProductoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestAplicacion.ComndoFacturaTest.ComandoFacturaTest.construircomando&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.controladorProducto.ControladorProductoTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -199,19 +199,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.ComandoFacturaTest.construircomando" />
       <item itemvalue="Gradle.ManejadorCrearproductoTest.ejecutar" />
       <item itemvalue="Gradle.ManejadoConsutarProductoTest.consultarProducto" />
       <item itemvalue="Gradle.ManejadorCrearFacturaTest.crear" />
       <item itemvalue="Gradle.ManejadorConsultarFacturaTest.consultar" />
+      <item itemvalue="Gradle.ControladorProductoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ControladorProductoTest" />
         <item itemvalue="Gradle.ManejadorConsultarFacturaTest.consultar" />
         <item itemvalue="Gradle.ManejadorCrearFacturaTest.crear" />
         <item itemvalue="Gradle.ManejadoConsutarProductoTest.consultarProducto" />
         <item itemvalue="Gradle.ManejadorCrearproductoTest.ejecutar" />
-        <item itemvalue="Gradle.ComandoFacturaTest.construircomando" />
       </list>
     </recent_temporary>
   </component>
