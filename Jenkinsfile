@@ -41,18 +41,23 @@ pipeline {
     }
     stage('Build') {
       steps {
-        echo "------------>Build<------------"
+        echo "------------>Build<------------"        
+//Construir sin tarea test que se ejecutó previamente
 
-          //Construir sin tarea test que se ejecutó previamente
-          //sh 'gradle build -x test'
-        sh 'gradle --b ./build.gradle build -x test'
+    dir("licorera"){
+        sh 'gradle build -x test'
+}
+        //sh 'gradle --b ./build.gradle build -x test'
       }
     }
     stage('Tests') {
       steps {
         echo "------------>Unit Tests<------------"
-          //sh 'gradle test'
-        sh 'gradle --b ./build.gradle test'
+          
+	dir("licorera"){
+	sh 'gradle test'
+	}
+        //sh 'gradle --b ./build.gradle test'
       }
     }
     stage('Static Code Analysis') {

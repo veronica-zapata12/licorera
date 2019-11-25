@@ -80,12 +80,3 @@ public class ControladorProductoTest {
                 .andExpect(ok);
         }
     }
-//ComandoProducto comandoProducto = new ComandoProductoDataBuilder().build();
-
-       /* mockMvc.perform(MockMvcRequestBuilders.
-                get("http://localhost:8080/productos/{nombre}")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect((ResultMatcher) jsonPath("$[0].nombre", is("cerveza")));*/
