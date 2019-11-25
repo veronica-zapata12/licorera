@@ -75,27 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'com.ceiba.licorera'">
-    <configuration name="ControladorProductoTest.creaProducto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestInfraestructura.controladorProducto.controladorProducto.ControladorProductoTest.creaProducto&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.FacturaServicioCrearTest.crearFacturaValida">
     <configuration name="ControladorProductoTest.listarpornombres" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -136,12 +116,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FacturaServicioCrearTest.facturaExistente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DetalleFacturaServicioConsultarTest.obtenerDetalle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioCrearTest.facturaExistente&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.DetalleFacturaServicioConsultarTest.obtenerDetalle&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FacturaServicioCrearTest.crearFacturaValida" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioCrearTest.crearFacturaValida&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -199,19 +199,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.ControladorProductoTest.creaProducto" />
-      <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
       <item itemvalue="Gradle.Tests in 'com.ceiba.licorera'" />
       <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
       <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
+      <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.obtenerDetalle" />
+      <item itemvalue="Gradle.FacturaServicioCrearTest.crearFacturaValida" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FacturaServicioCrearTest.crearFacturaValida" />
+        <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.obtenerDetalle" />
         <item itemvalue="Gradle.Tests in 'com.ceiba.licorera'" />
         <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
         <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
-        <item itemvalue="Gradle.ControladorProductoTest.creaProducto" />
-        <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
       </list>
     </recent_temporary>
   </component>
@@ -308,6 +308,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/controlador/ControladorFactura.java</url>
           <line>25</line>
           <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Factura/DetalleFacturaServicioConsultarTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Factura/DetalleFacturaServicioConsultarTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Factura/DetalleFacturaServicioConsultarTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="171" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/controlador/ControladorFactura.java</url>

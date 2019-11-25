@@ -33,10 +33,12 @@ public class FacturaServicioCrearTest {
         RepositorioFactura repositorioFactura= mock(RepositorioFactura.class);
         Mockito.when(repositorioFactura.existe(Mockito.any())).thenReturn(false);
         ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
-            //BasePrueba.assertThrows(() ->servicioCrearFactura.ejecutar(factura),ExcepcionGeneral.class,"error al crear ");
-            //Assert
-            //Assertions.assertTrue(true);//validar que la factura quede en el repositorio
+        try{
+            //act
+            servicioCrearFactura.ejecutar(factura);
+        }catch (Exception e){
+            Assertions.fail("error en la creacion de la factura");
 
-
+        }
     }
 }

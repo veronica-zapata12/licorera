@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-25T13:10:08" hostname="VERONICA-ZAPATA" time="0.043">
-  <properties/>
-  <testcase name="obtenerProductos()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.038"/>
-  <testcase name="obtenerProductoPornombre()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
