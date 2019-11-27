@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-11-26T19:37:33" hostname="VERONICA-ZAPATA" time="0.107">
+  <properties/>
+  <testcase name="creaProducto()" classname="com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest" time="0.051"/>
+  <testcase name="listarpornombres()" classname="com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest" time="0.029"/>
+  <testcase name="listarproductos()" classname="com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest" time="0.021"/>
+  <system-out><![CDATA[2019-11-26 14:37:33.912  INFO 16952 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest], using SpringBootContextLoader
+2019-11-26 14:37:33.914  INFO 16952 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-11-26 14:37:33.921  INFO 16952 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2019-11-26 14:37:33.922  INFO 16952 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ed443aa, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18f0ef34, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6b3f4298, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ae64524, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d380c1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@19454660, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8ffec52, org.springframework.test.context.event.EventPublishingTestExecutionListener@40f8570c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ab7025a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69f2292a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1e18d53a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1cdab1c2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7e1dc5d1]
+2019-11-26 14:37:33.928  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@1252ead4, testMethod = creaProducto@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@23f32af8]; rollback [true]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /productos
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json"]
+             Body = {"id":null,"nombre":"cerveza","valor":45000.0}
+    Session Attrs = {}
+
+Handler:
+             Type = com.ceiba.licorera.infraestructura.controlador.ControladorProducto
+           Method = com.ceiba.licorera.infraestructura.controlador.ControladorProducto#crear(ComandoProducto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2019-11-26 14:37:33.977  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@1252ead4, testMethod = creaProducto@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-11-26 14:37:33.981  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@4cf28f31, testMethod = listarpornombres@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@23f32af8]; rollback [true]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /productos/cerveza
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.ceiba.licorera.infraestructura.controlador.ControladorProducto
+           Method = com.ceiba.licorera.infraestructura.controlador.ControladorProducto#buscarPorNombre(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2019-11-26 14:37:34.007  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@4cf28f31, testMethod = listarpornombres@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+2019-11-26 14:37:34.016  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@79b85f1f, testMethod = listarproductos@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@23f32af8]; rollback [true]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /productos
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = [{"idProducto":1,"nombre":"vodka","valor":55000.0},{"idProducto":1,"nombre":"ron","valor":40000.0}]
+    Session Attrs = {}
+
+Handler:
+             Type = com.ceiba.licorera.infraestructura.controlador.ControladorProducto
+           Method = com.ceiba.licorera.infraestructura.controlador.ControladorProducto#listarProductos()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2019-11-26 14:37:34.033  INFO 16952 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@7163b2c9 testClass = ControladorProductoTest, testInstance = com.ceiba.licorera.TestInfraestructura.controladorProducto.ControladorProductoTest@79b85f1f, testMethod = listarproductos@ControladorProductoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@572d10dc testClass = ControladorProductoTest, locations = '{}', classes = '{class com.ceiba.licorera.LicoreraApplication, class com.ceiba.licorera.LicoreraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5958c4fe, [ImportsContextCustomizer@19191636 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@cec8338, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@781ad1d8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@793e8928], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

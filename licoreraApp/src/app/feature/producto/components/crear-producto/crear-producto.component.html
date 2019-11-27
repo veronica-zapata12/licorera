@@ -26,12 +26,12 @@
       </div>
     </div>
     <div class="center-align input-field col s3">
-      <button class="btn btn-primary" type="submit" [disabled]="nombre.invalid || valor.invalid"
+      <button id="Guardar" class="btn btn-primary" type="submit" [disabled]="nombre.invalid || valor.invalid"
         (click)="OnSubmit(form)">Guardar</button>
     </div>
   </div>
   <h4 class="card-title">
-      <a [routerLink]="['/listarproductos']" class="btn btn-light btn-xs"> Ir a lista productos &raquo;</a>
+      <a id="regresar" [routerLink]="['/listarproductos']"  class="btn btn-light btn-xs"> Ir a lista productos &raquo;</a>
     </h4>
 </form>
 </div>

@@ -7,7 +7,7 @@
               </div>
         <h1 class="center-align" >Nueva factura</h1>
         <h4  style="padding-left: 21em">
-            <a [routerLink]="['/listarfacturas']" class="btn btn-light btn-xs">&raquo; ir a lista facturas</a>
+            <a [routerLink]="['/listarfacturas']" id="ir a"class="btn btn-light btn-xs">&raquo; ir a lista facturas</a>
           </h4>
           <textarea  style="max-width: 350px;color:red"  >por compras superiores a 300000 se hace un descuento del 10% en el total</textarea>
           <textarea  style="max-width: 350px;color:red"  >no se pueden realizar facturas antes de las 11 AM</textarea>
@@ -18,7 +18,7 @@
             [formControl]="autocompleteControl" [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete" [displayWith]="mostrarNombre"
             (optionSelected)="selecionarProducto($event)">
-            <mat-option *ngFor="let producto of productosFiltrados | async" [value]="producto">
+            <mat-option id="lista" *ngFor="let producto of productosFiltrados | async" [value]="producto">
                 {{producto.nombre}}
             </mat-option>
         </mat-autocomplete>

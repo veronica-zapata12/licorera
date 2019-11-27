@@ -2,6 +2,7 @@ package com.ceiba.licorera.TestInfraestructura.controladorProducto;
 
 import com.ceiba.licorera.LicoreraApplication;
 import com.ceiba.licorera.aplicacion.comando.ComandoProducto;
+import com.ceiba.licorera.dominio.modelo.dto.ProductoDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -21,6 +22,9 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.transaction.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -38,6 +42,7 @@ public class ControladorProductoTest {
 
     @Autowired
     private MockMvc mockMvc;
+    private List<ProductoDto> productoDtoList=new ArrayList<>();
 
     @Before
     public void setup() throws Exception {
@@ -60,9 +65,13 @@ public class ControladorProductoTest {
 
     @Test
     public void listarproductos() throws Exception {
-        //creaProducto();
+        ProductoDto producto1 = new ProductoDto(1L, "vodka", 55000.0);
+        productoDtoList.add(producto1);
+        ProductoDto producto2 = new ProductoDto(1L, "ron", 40000.0);
+        productoDtoList.add(producto2);
         mockMvc.perform(get("http://localhost:8080/productos")
-                .contentType(MediaType.APPLICATION_JSON))
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(productoDtoList)))
                 .andDo(print())
                 .andExpect(status().isOk());
     }
@@ -75,7 +84,8 @@ public class ControladorProductoTest {
 
         MockHttpServletRequestBuilder builder =
                 MockMvcRequestBuilders.get("http://localhost:8080/productos/cerveza")
-                        .contentType(MediaType.APPLICATION_JSON);
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON);
         this.mockMvc.perform(builder)
                 .andDo(print())
                 .andExpect(ok);

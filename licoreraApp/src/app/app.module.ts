@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PrincipalComponent } from './feature/principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CrearProductoComponent,
     DetalleFacturaComponent,
     FacturaComponent,
-    ListarFacturaComponent
+    ListarFacturaComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
