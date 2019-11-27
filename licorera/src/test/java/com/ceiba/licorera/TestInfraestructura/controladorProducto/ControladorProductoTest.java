@@ -2,7 +2,10 @@ package com.ceiba.licorera.TestInfraestructura.controladorProducto;
 
 import com.ceiba.licorera.LicoreraApplication;
 import com.ceiba.licorera.aplicacion.comando.ComandoProducto;
+import com.ceiba.licorera.dominio.modelo.Producto;
 import com.ceiba.licorera.dominio.modelo.dto.ProductoDto;
+import com.ceiba.licorera.infraestructura.repositorio.ProductoRepositorio;
+import com.ceiba.licorera.infraestructura.repositorio.adaptador.AdaptadorProductoJpa;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -21,7 +24,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.transaction.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,10 +41,11 @@ public class ControladorProductoTest {
     private WebApplicationContext wac;
     @Autowired
     private ObjectMapper objectMapper;
+    @Autowired
+    private ProductoRepositorio productoRepositorio;
 
     @Autowired
     private MockMvc mockMvc;
-    private List<ProductoDto> productoDtoList=new ArrayList<>();
 
     @Before
     public void setup() throws Exception {
@@ -65,10 +68,17 @@ public class ControladorProductoTest {
 
     @Test
     public void listarproductos() throws Exception {
-        ProductoDto producto1 = new ProductoDto(1L, "vodka", 55000.0);
-        productoDtoList.add(producto1);
-        ProductoDto producto2 = new ProductoDto(1L, "ron", 40000.0);
-        productoDtoList.add(producto2);
+        AdaptadorProductoJpa adaptadorProductoJpa= new AdaptadorProductoJpa(productoRepositorio);
+        List<ProductoDto> productoDtoList=new ArrayList<>();
+
+        Producto producto1 = new Producto(1L, "vodka", 55000.0);
+       adaptadorProductoJpa.crear(producto1);
+        Producto producto2 = new Producto(1L, "ron", 40000.0);
+        adaptadorProductoJpa.crear(producto2);
+        ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
+        ProductoDto productoDto2 = new ProductoDto(1L, "ron", 40000.0);
+        productoDtoList.add(productoDto1);
+        productoDtoList.add(productoDto2);
         mockMvc.perform(get("http://localhost:8080/productos")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(productoDtoList)))
@@ -79,15 +89,20 @@ public class ControladorProductoTest {
 
     @Test
     public void listarpornombres() throws Exception {
-        ResultMatcher ok = MockMvcResultMatchers.status()
-                .isOk();
+        AdaptadorProductoJpa adaptadorProductoJpa= new AdaptadorProductoJpa(productoRepositorio);
+        List<ProductoDto> productoDtoList=new ArrayList<>();
 
-        MockHttpServletRequestBuilder builder =
-                MockMvcRequestBuilders.get("http://localhost:8080/productos/cerveza")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .accept(MediaType.APPLICATION_JSON);
-        this.mockMvc.perform(builder)
+        Producto producto1 = new Producto(1L, "vodka", 55000.0);
+        adaptadorProductoJpa.crear(producto1);
+        Producto producto2 = new Producto(1L, "ron", 40000.0);
+        adaptadorProductoJpa.crear(producto2);
+        ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
+
+        productoDtoList.add(productoDto1);
+        mockMvc.perform(get("http://localhost:8080/productos/vodka")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(productoDtoList)))
                 .andDo(print())
-                .andExpect(ok);
+                .andExpect(status().isOk());
     }
 }

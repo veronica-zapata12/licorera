@@ -81,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.FacturaServicioCrearTest.facturaExistente">
+  <component name="RunManager" selected="Gradle.ControladorProductoTest.listarpornombres">
     <configuration name="ControladorProductoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -213,10 +213,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
         <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
-        <item itemvalue="Gradle.ControladorProductoTest" />
         <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
+        <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
+        <item itemvalue="Gradle.ControladorProductoTest" />
         <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.getters" />
       </list>
     </recent_temporary>
