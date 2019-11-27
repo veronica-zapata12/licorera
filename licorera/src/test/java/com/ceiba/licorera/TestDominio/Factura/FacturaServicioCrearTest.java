@@ -19,14 +19,14 @@ public class FacturaServicioCrearTest {
             //Arrange
             Factura factura= new FacturaDataBuilder().build();
             RepositorioFactura repositorioFactura= mock(RepositorioFactura.class);
-            Mockito.when(repositorioFactura.existe(Mockito.any())).thenReturn(false);
+            Mockito.when(repositorioFactura.existe(Mockito.any())).thenReturn(true);
             ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
         try {
             //act
             servicioCrearFactura.ejecutar(factura);
-
-        } catch (ExcepcionGeneral e) {
-            Assertions.fail("error en la creacion del producto");
+            Assertions.fail("esperaba que lanzara la excepcion de que ya existe");
+        } catch (ExcepcionDuplicidad e) {
+            Assertions.assertEquals("la factura ya existe en el sistema", e.getMessage());
         }
 
     }

@@ -1,7 +1,6 @@
 package com.ceiba.licorera.infraestructura.repositorio.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 
 @Entity

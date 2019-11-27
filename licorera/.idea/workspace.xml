@@ -81,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.run">
+  <component name="RunManager" selected="Gradle.FacturaServicioCrearTest.facturaExistente">
     <configuration name="ControladorProductoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -162,12 +162,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FacturaServicioConsultarTest.getters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FacturaServicioCrearTest.facturaExistente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest.getters&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioCrearTest.facturaExistente&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -205,19 +205,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.FacturaServicioConsultarTest.getters" />
       <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.getters" />
       <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
       <item itemvalue="Gradle.ControladorProductoTest" />
       <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
+      <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
         <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
         <item itemvalue="Gradle.ControladorProductoTest" />
         <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
         <item itemvalue="Gradle.DetalleFacturaServicioConsultarTest.getters" />
-        <item itemvalue="Gradle.FacturaServicioConsultarTest.getters" />
       </list>
     </recent_temporary>
   </component>

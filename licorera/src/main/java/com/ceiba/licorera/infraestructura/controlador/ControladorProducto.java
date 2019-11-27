@@ -4,7 +4,6 @@ import com.ceiba.licorera.aplicacion.comando.ComandoProducto;
 import com.ceiba.licorera.aplicacion.comando.manejador.producto.ManejadorConsultarProductos;
 import com.ceiba.licorera.aplicacion.comando.manejador.producto.ManejadorCrearProducto;
 import com.ceiba.licorera.dominio.modelo.dto.ProductoDto;
-import com.ceiba.licorera.infraestructura.repositorio.adaptador.AdaptadorProductoJpa;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
