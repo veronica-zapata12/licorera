@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestAplicacion.Comando.ComandoProductoTest.ComandoProductoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-26T19:37:19" hostname="VERONICA-ZAPATA" time="0.044">
+<testsuite name="com.ceiba.licorera.TestAplicacion.Comando.ComandoProductoTest.ComandoProductoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T12:56:36" hostname="VERONICA-ZAPATA" time="0.694">
   <properties/>
-  <testcase name="construirComando()" classname="com.ceiba.licorera.TestAplicacion.Comando.ComandoProductoTest.ComandoProductoTest" time="0.044"/>
+  <testcase name="construirComando()" classname="com.ceiba.licorera.TestAplicacion.Comando.ComandoProductoTest.ComandoProductoTest" time="0.694"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

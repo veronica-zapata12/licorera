@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestDominio.DetalleFactura.TestDetalleFactura" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-26T19:37:20" hostname="VERONICA-ZAPATA" time="0.006">
+<testsuite name="com.ceiba.licorera.TestDominio.DetalleFactura.TestDetalleFactura" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-27T12:56:39" hostname="VERONICA-ZAPATA" time="0.008">
   <properties/>
-  <testcase name="calcularvalor()" classname="com.ceiba.licorera.TestDominio.DetalleFactura.TestDetalleFactura" time="0.005"/>
+  <testcase name="calcularvalor()" classname="com.ceiba.licorera.TestDominio.DetalleFactura.TestDetalleFactura" time="0.007"/>
   <testcase name="obtenerCanitadad()" classname="com.ceiba.licorera.TestDominio.DetalleFactura.TestDetalleFactura" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

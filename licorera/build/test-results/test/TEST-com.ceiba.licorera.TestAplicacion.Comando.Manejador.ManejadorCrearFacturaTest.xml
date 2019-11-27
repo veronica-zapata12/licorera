@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearFacturaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-26T19:37:20" hostname="VERONICA-ZAPATA" time="0.055">
+<testsuite name="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearFacturaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T12:56:39" hostname="VERONICA-ZAPATA" time="0.054">
   <properties/>
-  <testcase name="crear()" classname="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearFacturaTest" time="0.055"/>
+  <testcase name="crear()" classname="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearFacturaTest" time="0.054"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

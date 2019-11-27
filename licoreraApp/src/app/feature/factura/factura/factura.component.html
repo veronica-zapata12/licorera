@@ -1,17 +1,20 @@
-
 <div class="card-header">
-        <div style="text-align:left;padding-left: 30em">
-                <h1><span style="color:gray;"></span></h1> <iframe
-                  src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FBogota"
-                  width="100%" height="90" frameborder="0"></iframe>
-              </div>
-        <h1 class="center-align" >Nueva factura</h1>
-        <h4  style="padding-left: 21em">
-            <a [routerLink]="['/listarfacturas']" id="ir a"class="btn btn-light btn-xs">&raquo; ir a lista facturas</a>
-          </h4>
-          <textarea  style="max-width: 350px;color:red"  >por compras superiores a 300000 se hace un descuento del 10% en el total</textarea>
-          <textarea  style="max-width: 350px;color:red"  >no se pueden realizar facturas antes de las 11 AM</textarea>
-        </div>
+    <div style="text-align:left;padding-left: 30em">
+        <h1><span style="color:gray;"></span></h1> <iframe
+            src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FBogota"
+            width="100%" height="90" frameborder="0"></iframe>
+    </div>
+    <h1 class="center-align">Nueva factura</h1>
+    <h4 class="card-title">
+        <a id="home" [routerLink]="['/home']" class="btn btn-light btn-xs"> inicio &laquo;</a>
+    </h4>
+    <h4 style="padding-left: 21em">
+        <a [routerLink]="['/listarfacturas']" id="ir a" class="btn btn-light btn-xs">&raquo; ir a lista facturas</a>
+    </h4>
+    <textarea
+        style="max-width: 350px;color:red">por compras superiores a 300000 se hace un descuento del 10% en el total</textarea>
+    <textarea style="max-width: 350px;color:red">no se pueden realizar facturas antes de las 11 AM</textarea>
+</div>
 <form class="example-form">
     <mat-form-field class="example-full-width">
         <input type="text" placeholder="añadir producto" aria-label="productos" matInput
@@ -41,7 +44,7 @@
                         (change)="actualizarCantidad(detalle.producto.nombre, $event)"></td>
                 <td>{{detalle.calcularSubTotal()}}</td>
                 <td><button class="btn btn-danger btn-sm" type="button"
-                    (click)="eliminarItemFactura(detalle.producto.nombre)">x</button></td>
+                        (click)="eliminarItemFactura(detalle.producto.nombre)">x</button></td>
             </tr>
         </tbody>
     </table>
