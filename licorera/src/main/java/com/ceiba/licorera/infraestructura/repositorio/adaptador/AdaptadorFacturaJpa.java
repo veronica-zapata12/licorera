@@ -2,7 +2,6 @@ package com.ceiba.licorera.infraestructura.repositorio.adaptador;
 
 import com.ceiba.licorera.dominio.modelo.DetalleFactura;
 import com.ceiba.licorera.dominio.modelo.Factura;
-import com.ceiba.licorera.dominio.modelo.dto.DetallefacturaDto;
 import com.ceiba.licorera.dominio.modelo.dto.FacturaDto;
 import com.ceiba.licorera.dominio.puerto.repositorio.RepositorioFactura;
 import com.ceiba.licorera.infraestructura.repositorio.FacturaRepositorio;

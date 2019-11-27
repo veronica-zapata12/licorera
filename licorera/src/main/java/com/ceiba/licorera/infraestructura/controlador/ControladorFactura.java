@@ -5,7 +5,6 @@ import com.ceiba.licorera.aplicacion.comando.manejador.factura.ManejadorConsulta
 import com.ceiba.licorera.aplicacion.comando.manejador.factura.ManejadorCrearFactura;
 import com.ceiba.licorera.dominio.modelo.dto.FacturaDto;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

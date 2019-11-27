@@ -17,7 +17,6 @@ import java.util.List;
 public class ControladorProducto {
     private final ManejadorCrearProducto manejadorCrearProducto;
     private final ManejadorConsultarProductos manejadorConsultarProductos;
-    private AdaptadorProductoJpa adaptadorProductoJpa;
 
 
     public ControladorProducto(ManejadorCrearProducto manejadorCrearProducto, ManejadorConsultarProductos manejadorConsultarProductos) {

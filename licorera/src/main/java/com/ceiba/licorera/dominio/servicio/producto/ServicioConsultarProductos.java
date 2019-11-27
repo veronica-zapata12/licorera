@@ -1,6 +1,4 @@
 package com.ceiba.licorera.dominio.servicio.producto;
-
-import com.ceiba.licorera.dominio.modelo.Producto;
 import com.ceiba.licorera.dominio.modelo.dto.ProductoDto;
 import com.ceiba.licorera.dominio.puerto.repositorio.RepositorioProducto;
 import org.springframework.stereotype.Service;
