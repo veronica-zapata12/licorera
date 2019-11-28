@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/feature/shared/service/service.service';
+import { Producto } from 'src/app/feature/shared/model/producto';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ServiceService } from 'src/app/feature/shared/service/service.service';
   styleUrls: ['./listar-producto.component.css']
 })
 export class ListarProductoComponent implements OnInit {
-  producto: any[];
+  producto: Producto[];
   constructor(private productoService: ServiceService) { }
 
   ngOnInit() {

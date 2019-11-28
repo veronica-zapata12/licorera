@@ -49,10 +49,6 @@ public class FacturaEntity implements Serializable {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     public Double getTotal() {
         return total;
     }
@@ -69,5 +65,5 @@ public class FacturaEntity implements Serializable {
         this.hora = hora;
     }
 
-    private static final Long serialVersionUID = 1L;
+    private static final long serialVersionUID  = 1L;
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearproductoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-28T15:48:38" hostname="VERONICA-ZAPATA" time="0.033">
+  <properties/>
+  <testcase name="ejecutar()" classname="com.ceiba.licorera.TestAplicacion.Comando.Manejador.ManejadorCrearproductoTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

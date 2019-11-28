@@ -6,9 +6,8 @@ import { UrlRuta } from '../urlRuta';
   providedIn: 'root'
 })
 export class ServiceDetalleFacturaService {
-  constructor(private http:HttpClient,private urlRuta:UrlRuta) {}
-  readonly route =this.urlRuta.getRuta();
+  constructor(private http:HttpClient) {}
   getFacturaporid(idFactura: number){
-    return this.http.get(this.route +'/detallefactura/'+ idFactura)
+    return this.http.get('api/detallefactura/'+ idFactura)
   }
 }

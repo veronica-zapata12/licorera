@@ -16,14 +16,14 @@ export class ServiceService {
         valor:producto.valor
 
       };
-      return this.http.post(this.route + '/productos',sendProducto)
+      return this.http.post('api/productos',sendProducto)
 
     }
     getPorductos(){
-      return this.http.get(this.route + '/productos')
+      return this.http.get('api/productos')
     }
 filtrarproductos(nombre:string):Observable<Producto[]>{
-  return this.http.get<Producto[]>(this.route + '/productos/'+ nombre)
+  return this.http.get<Producto[]>('api/productos/'+ nombre)
 }
 
 

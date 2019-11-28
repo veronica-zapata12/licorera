@@ -52,6 +52,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ControladorFacturaTest.detalleFacturaPorId">
+  <component name="RunManager" selected="Gradle.run">
     <configuration name="ControladorFacturaTest.detalleFacturaPorId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -329,16 +330,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Factura/DetalleFacturaServicioConsultarTest.java</url>
           <line>36</line>
           <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestInfraestructura/controladorFactura/ControladorFacturaTest.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestInfraestructura/controladorFactura/ControladorFacturaTest.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/controlador/ControladorFactura.java</url>

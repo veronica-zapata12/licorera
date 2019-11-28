@@ -2,7 +2,7 @@ describe('Prueba flujo principal', function() {
     it('should have a title', function() {
       browser.get('http://localhost:4200/');
   
-      expect(browser.getTitle()).toEqual('BIENVENIDOS A LA LICORERA');
+      expect(browser.getTitle()).toEqual('LicoreraApp');
       browser.sleep( 1000 );
     });
   });

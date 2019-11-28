@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { factura } from '../model/factura';
 import { UrlRuta } from '../urlRuta';
-import { DetalleFactura } from '../model/detalle-factura';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,10 +12,10 @@ export class ServiceFacturaService {
   readonly route =this.urlRuta.getRuta();
     create(factura: factura){
       
-      return this.http.post<factura>(this.route + '/factura', factura);
+      return this.http.post<factura>( 'api/factura', factura);
     }
   
   getFactura(){
-    return this.http.get(this.route + '/factura')
+    return this.http.get( 'api/factura')
   }
 }

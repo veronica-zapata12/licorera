@@ -55,7 +55,7 @@ public class ControladorFacturaTest {
     private AdaptadorDetalleFacturaJpa adaptadorDetalleFacturaJpa;
     @Autowired
     private ProductoRepositorio productoRepositorio;
-   
+
     @Before
     public void setup() throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();

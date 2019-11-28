@@ -1,12 +1,13 @@
 package com.ceiba.licorera.infraestructura.repositorio.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Entity
 @Table(name = "productos")
-public class ProductoEntity{
-
+public class ProductoEntity implements Serializable {
+    private static final long serialVersionUID =1L;
     @Id
     @Column
     private String nombre;

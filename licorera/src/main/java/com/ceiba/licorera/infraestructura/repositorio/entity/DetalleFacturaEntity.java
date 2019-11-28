@@ -48,5 +48,5 @@ public class DetalleFacturaEntity implements Serializable {
     public void setProductoEntity(ProductoEntity productoEntity) {
         this.productoEntity = productoEntity;
     }
-    private static final Long serialVersionUID = 1L;
+    private static final long serialVersionUID  = 1L;
 }
