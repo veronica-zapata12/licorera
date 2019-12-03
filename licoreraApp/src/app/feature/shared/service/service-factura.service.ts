@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { factura } from '../model/factura';
-import { UrlRuta } from '../urlRuta';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceFacturaService {
 
-  constructor(private http:HttpClient,private urlRuta:UrlRuta) {}
-  readonly route =this.urlRuta.getRuta();
+  constructor(private http:HttpClient) {}
+
     create(factura: factura){
       
       return this.http.post<factura>( 'api/factura', factura);

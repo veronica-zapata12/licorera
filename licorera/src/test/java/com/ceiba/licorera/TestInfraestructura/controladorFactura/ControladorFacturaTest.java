@@ -8,13 +8,11 @@ import com.ceiba.licorera.dominio.modelo.Producto;
 import com.ceiba.licorera.dominio.modelo.dto.DetallefacturaDto;
 import com.ceiba.licorera.dominio.modelo.dto.FacturaDto;
 import com.ceiba.licorera.dominio.modelo.dto.ProductoDto;
-import com.ceiba.licorera.infraestructura.repositorio.DetalleFacturaRepositorio;
-import com.ceiba.licorera.infraestructura.repositorio.FacturaRepositorio;
-import com.ceiba.licorera.infraestructura.repositorio.ProductoRepositorio;
-import com.ceiba.licorera.infraestructura.repositorio.adaptador.AdaptadorDetalleFacturaJpa;
-import com.ceiba.licorera.infraestructura.repositorio.adaptador.AdaptadorFacturaJpa;
-import com.ceiba.licorera.infraestructura.repositorio.adaptador.AdaptadorProductoJpa;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.ceiba.licorera.infraestructura.repositorio.FacturaRepositorioJPA;
+import com.ceiba.licorera.infraestructura.repositorio.ProductoRepositorioJPA;
+import com.ceiba.licorera.infraestructura.repositorio.adaptador.RepositorioDetalleFacturaPostgres;
+import com.ceiba.licorera.infraestructura.repositorio.adaptador.RepositorioFacturaPostgres;
+import com.ceiba.licorera.infraestructura.repositorio.adaptador.RepositorioProductoPostgres;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -50,11 +48,11 @@ public class ControladorFacturaTest {
     @Autowired
     private MockMvc mockMvc;
     @Autowired
-    private FacturaRepositorio facturaRepositorio;
+    private FacturaRepositorioJPA facturaRepositorioJPA;
     @Autowired
-    private AdaptadorDetalleFacturaJpa adaptadorDetalleFacturaJpa;
+    private RepositorioDetalleFacturaPostgres repositorioDetalleFacturaPostgres;
     @Autowired
-    private ProductoRepositorio productoRepositorio;
+    private ProductoRepositorioJPA productoRepositorioJPA;
 
     @Before
     public void setup() throws Exception {
@@ -78,23 +76,23 @@ public class ControladorFacturaTest {
     @Test
     void listarFacturas() throws Exception {
         //arrange
-        AdaptadorProductoJpa adaptadorProductoJpa = new AdaptadorProductoJpa(productoRepositorio);
-        AdaptadorFacturaJpa adaptadorFacturaJpa = new AdaptadorFacturaJpa(facturaRepositorio, adaptadorDetalleFacturaJpa);
+        RepositorioProductoPostgres repositorioProductoPostgres = new RepositorioProductoPostgres(productoRepositorioJPA);
+        RepositorioFacturaPostgres repositorioFacturaPostgres = new RepositorioFacturaPostgres(facturaRepositorioJPA, repositorioDetalleFacturaPostgres);
         List<FacturaDto> facturaDtoList = new ArrayList<>();
         List<DetalleFactura> detalleFacturas = new ArrayList<>();
     Long id = 1L;
     Producto producto1 = new Producto(1L, "vodka", 55000.0);
-        adaptadorProductoJpa.crear(producto1);
+        repositorioProductoPostgres.crear(producto1);
     int cantidad1 = 3;
     DetalleFactura detalleFactura = new DetalleFactura(cantidad1, producto1);
         detalleFacturas.add(detalleFactura);
     Producto producto2 = new Producto(1L, "ron", 40000.0);
-        adaptadorProductoJpa.crear(producto2);
+        repositorioProductoPostgres.crear(producto2);
     int cantidad2 = 4;
     DetalleFactura detalleFactura2 = new DetalleFactura(cantidad2, producto2);
         detalleFacturas.add(detalleFactura2);
     Factura factura = new Factura(id, detalleFacturas);
-        adaptadorFacturaJpa.crear(factura);
+        repositorioFacturaPostgres.crear(factura);
     List<DetallefacturaDto> detalleFacturasDto = new ArrayList<>();
     Long id1 = 1L;
     ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
@@ -117,22 +115,22 @@ public class ControladorFacturaTest {
 @Test
     void detalleFacturaPorId() throws Exception {
     //arrange
-    AdaptadorProductoJpa adaptadorProductoJpa = new AdaptadorProductoJpa(productoRepositorio);
-    AdaptadorFacturaJpa adaptadorFacturaJpa = new AdaptadorFacturaJpa(facturaRepositorio, adaptadorDetalleFacturaJpa);
+    RepositorioProductoPostgres repositorioProductoPostgres = new RepositorioProductoPostgres(productoRepositorioJPA);
+    RepositorioFacturaPostgres repositorioFacturaPostgres = new RepositorioFacturaPostgres(facturaRepositorioJPA, repositorioDetalleFacturaPostgres);
     List<DetalleFactura> detalleFacturas = new ArrayList<>();
     Long id = 1L;
     Producto producto1 = new Producto(1L, "vodka", 55000.0);
-    adaptadorProductoJpa.crear(producto1);
+    repositorioProductoPostgres.crear(producto1);
     int cantidad1 = 3;
     DetalleFactura detalleFactura = new DetalleFactura(cantidad1, producto1);
     detalleFacturas.add(detalleFactura);
     Producto producto2 = new Producto(1L, "ron", 40000.0);
-    adaptadorProductoJpa.crear(producto2);
+    repositorioProductoPostgres.crear(producto2);
     int cantidad2 = 4;
     DetalleFactura detalleFactura2 = new DetalleFactura(cantidad2, producto2);
     detalleFacturas.add(detalleFactura2);
     Factura factura = new Factura(id, detalleFacturas);
-    adaptadorFacturaJpa.crear(factura);
+    repositorioFacturaPostgres.crear(factura);
     List<DetallefacturaDto> detalleFacturasDto = new ArrayList<>();
     ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
     int cantidadDto1 = 3;

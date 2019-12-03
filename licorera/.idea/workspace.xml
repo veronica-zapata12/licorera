@@ -163,12 +163,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FacturaServicioCrearTest.facturaExistente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'licorera.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.licorera.TestDominio.Factura.FacturaServicioCrearTest.facturaExistente&quot;" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -208,17 +208,17 @@
       <item itemvalue="Gradle.run" />
       <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
       <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
-      <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
       <item itemvalue="Gradle.ControladorFacturaTest.listarFacturas" />
       <item itemvalue="Gradle.ControladorFacturaTest.detalleFacturaPorId" />
+      <item itemvalue="Gradle.Tests in 'licorera.test'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'licorera.test'" />
         <item itemvalue="Gradle.ControladorFacturaTest.detalleFacturaPorId" />
         <item itemvalue="Gradle.ControladorFacturaTest.listarFacturas" />
         <item itemvalue="Gradle.ControladorProductoTest.listarpornombres" />
         <item itemvalue="Gradle.ControladorProductoTest.listarproductos" />
-        <item itemvalue="Gradle.FacturaServicioCrearTest.facturaExistente" />
       </list>
     </recent_temporary>
   </component>
@@ -252,34 +252,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorFacturaJpa.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorDetalleFacturaJpa.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/RepositorioDetalleFacturaPostgres.java</url>
           <line>28</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorDetalleFacturaJpa.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/RepositorioDetalleFacturaPostgres.java</url>
           <line>32</line>
           <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorFacturaJpa.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorFacturaJpa.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceiba/licorera/infraestructura/repositorio/adaptador/AdaptadorFacturaJpa.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestInfraestructura/Producto/ControladorProductoTest.java</url>

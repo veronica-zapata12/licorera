@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-11-28T15:48:38" hostname="VERONICA-ZAPATA" time="0.023">
+<testsuite name="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-12-02T19:32:37" hostname="VERONICA-ZAPATA" time="0.046">
   <properties/>
-  <testcase name="Setter()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.001"/>
-  <testcase name="obtenerProductos()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.019"/>
+  <testcase name="Setter()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.0"/>
+  <testcase name="obtenerProductos()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.04"/>
   <testcase name="getter()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.001"/>
-  <testcase name="obtenerProductoPornombre()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.001"/>
+  <testcase name="obtenerProductoPornombre()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioConsultarProductos" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
