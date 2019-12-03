@@ -26,7 +26,7 @@ import java.util.List;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = LicoreraApplication.class)
@@ -65,40 +65,37 @@ public class ControladorProductoTest {
     @Test
     public void listarproductos() throws Exception {
         RepositorioProductoPostgres repositorioProductoPostgres = new RepositorioProductoPostgres(productoRepositorioJPA);
-        List<ProductoDto> productoDtoList=new ArrayList<>();
+
 
         Producto producto1 = new Producto(1L, "vodka", 55000.0);
        repositorioProductoPostgres.crear(producto1);
         Producto producto2 = new Producto(1L, "ron", 40000.0);
         repositorioProductoPostgres.crear(producto2);
-        ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
-        ProductoDto productoDto2 = new ProductoDto(1L, "ron", 40000.0);
-        productoDtoList.add(productoDto1);
-        productoDtoList.add(productoDto2);
-        mockMvc.perform(get("http://localhost:8080/productos")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(productoDtoList)))
-                .andDo(print())
-                .andExpect(status().isOk());
+        mockMvc.perform(get("http://localhost:8080/productos"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("[0].nombre").value("vodka"))
+                .andExpect(jsonPath("[0].valor").value(55000.0))
+                .andExpect(jsonPath("[1].nombre").value("ron"))
+                .andExpect(jsonPath("[1].valor").value(40000))
+                .andDo(print());
+
     }
 
 
     @Test
     public void listarpornombres() throws Exception {
         RepositorioProductoPostgres repositorioProductoPostgres = new RepositorioProductoPostgres(productoRepositorioJPA);
-        List<ProductoDto> productoDtoList=new ArrayList<>();
 
         Producto producto1 = new Producto(1L, "vodka", 55000.0);
         repositorioProductoPostgres.crear(producto1);
         Producto producto2 = new Producto(1L, "ron", 40000.0);
         repositorioProductoPostgres.crear(producto2);
-        ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
-
-        productoDtoList.add(productoDto1);
-        mockMvc.perform(get("http://localhost:8080/productos/vodka")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(productoDtoList)))
-                .andDo(print())
-                .andExpect(status().isOk());
+        mockMvc.perform(get("http://localhost:8080/productos/{nombre}", "ron"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("[1].nombre").value("ron"))
+                .andExpect(jsonPath("[1].valor").value(40000))
+                .andDo(print());
     }
 }

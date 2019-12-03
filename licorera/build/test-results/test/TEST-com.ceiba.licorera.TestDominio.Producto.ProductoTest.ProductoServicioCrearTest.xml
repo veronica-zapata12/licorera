@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioCrearTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-12-02T19:32:38" hostname="VERONICA-ZAPATA" time="0.005">
-  <properties/>
-  <testcase name="CrearProductonulo()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioCrearTest" time="0.001"/>
-  <testcase name="crearProductoValido()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioCrearTest" time="0.001"/>
-  <testcase name="Validarsiexiste()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoServicioCrearTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

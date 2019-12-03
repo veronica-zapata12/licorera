@@ -28,12 +28,14 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = LicoreraApplication.class)
@@ -78,7 +80,6 @@ public class ControladorFacturaTest {
         //arrange
         RepositorioProductoPostgres repositorioProductoPostgres = new RepositorioProductoPostgres(productoRepositorioJPA);
         RepositorioFacturaPostgres repositorioFacturaPostgres = new RepositorioFacturaPostgres(facturaRepositorioJPA, repositorioDetalleFacturaPostgres);
-        List<FacturaDto> facturaDtoList = new ArrayList<>();
         List<DetalleFactura> detalleFacturas = new ArrayList<>();
     Long id = 1L;
     Producto producto1 = new Producto(1L, "vodka", 55000.0);
@@ -93,24 +94,13 @@ public class ControladorFacturaTest {
         detalleFacturas.add(detalleFactura2);
     Factura factura = new Factura(id, detalleFacturas);
         repositorioFacturaPostgres.crear(factura);
-    List<DetallefacturaDto> detalleFacturasDto = new ArrayList<>();
-    Long id1 = 1L;
-    ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
-    int cantidadDto1 = 3;
-    DetallefacturaDto detalleFacturaDto = new DetallefacturaDto(cantidadDto1, productoDto1);
-        detalleFacturasDto.add(detalleFacturaDto);
-    ProductoDto productoDto2 = new ProductoDto(1L, "ron", 40000.0);
-    int cantidadDto2 = 4;
-    DetallefacturaDto detalleFacturaDto2 = new DetallefacturaDto(cantidadDto2, productoDto2);
-        detalleFacturasDto.add(detalleFacturaDto2);
-
-    FacturaDto facturaDto = new FacturaDto(id1, detalleFacturasDto);
-        facturaDtoList.add(facturaDto);
-        mockMvc.perform(get("http://localhost:8080/factura")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(facturaDtoList)))
-            .andDo(print())
-            .andExpect(status().isOk());
+        mockMvc.perform(get("http://localhost:8080/factura"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("[0].id").value(1))
+                .andExpect(jsonPath("[0].total").value(292500.0))
+                .andExpect(jsonPath("[0].hora").value(factura.getHora()))
+                .andDo(print());
 }
 @Test
     void detalleFacturaPorId() throws Exception {
@@ -131,21 +121,16 @@ public class ControladorFacturaTest {
     detalleFacturas.add(detalleFactura2);
     Factura factura = new Factura(id, detalleFacturas);
     repositorioFacturaPostgres.crear(factura);
-    List<DetallefacturaDto> detalleFacturasDto = new ArrayList<>();
-    ProductoDto productoDto1 = new ProductoDto(1L, "vodka", 55000.0);
-    int cantidadDto1 = 3;
-    DetallefacturaDto detalleFacturaDto = new DetallefacturaDto(cantidadDto1, productoDto1);
-    detalleFacturasDto.add(detalleFacturaDto);
-    ProductoDto productoDto2 = new ProductoDto(1L, "ron", 40000.0);
-    int cantidadDto2 = 4;
-    DetallefacturaDto detalleFacturaDto2 = new DetallefacturaDto(cantidadDto2, productoDto2);
-    detalleFacturasDto.add(detalleFacturaDto2);
-
-    mockMvc.perform(get("http://localhost:8080/detallefactura/1")
-            .contentType(MediaType.APPLICATION_JSON)
-            .content(objectMapper.writeValueAsString(detalleFacturasDto)))
-            .andDo(print())
-            .andExpect(status().isOk());
+    mockMvc.perform(get("http://localhost:8080/detallefactura/1"))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType("application/json"))
+            .andExpect(jsonPath("[0].cantidad").value(3))
+            .andExpect(jsonPath("[0].producto.nombre").value("vodka"))
+            .andExpect(jsonPath("[0].producto.valor").value(55000))
+            .andExpect(jsonPath("[1].cantidad").value(4))
+            .andExpect(jsonPath("[1].producto.nombre").value("ron"))
+            .andExpect(jsonPath("[1].producto.valor").value(40000))
+            .andDo(print());
 
 }
 }
