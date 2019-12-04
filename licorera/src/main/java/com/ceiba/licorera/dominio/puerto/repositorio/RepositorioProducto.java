@@ -13,7 +13,6 @@ public interface RepositorioProducto {
 
     List<ProductoDto> buscarPornombre(String nombre);
 
-    Double obtenerValorporNombre(String nombre);
 
     List<ProductoDto> obtenerProductos();
 }

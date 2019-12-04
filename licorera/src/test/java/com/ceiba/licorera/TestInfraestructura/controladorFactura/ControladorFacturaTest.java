@@ -123,10 +123,10 @@ public class ControladorFacturaTest {
     mockMvc.perform(get("http://localhost:8080/detallefactura/1"))
             .andExpect(status().isOk())
             .andExpect(content().contentType("application/json"))
-            //.andExpect(jsonPath("[0].cantidad").value(3))
+            .andExpect(jsonPath("[0].cantidad").value(3))
             .andExpect(jsonPath("[0].producto.nombre").value("vodka"))
             .andExpect(jsonPath("[0].producto.valor").value(55000))
-            //.andExpect(jsonPath("[1].cantidad").value(4))
+            .andExpect(jsonPath("[1].cantidad").value(4))
             .andExpect(jsonPath("[1].producto.nombre").value("ron"))
             .andExpect(jsonPath("[1].producto.valor").value(40000))
             .andDo(print());

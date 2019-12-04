@@ -62,5 +62,22 @@ public class ProductoTest {
         Assertions.assertEquals(VALOR, producto.getValor());
 
     }
+    @Test
+    void setter(){
+        //arrange
+        ProductoDataBuilder productoDataBuilder = new ProductoDataBuilder();
+        //act
+        Producto producto = productoDataBuilder.build();
+        producto.setNombre("ron");
+        producto.setIdProducto(100L);
+        producto.setValor(35000.0);
+        //assert
+        Assertions.assertEquals(35000.0, producto.getValor());
+        Assertions.assertEquals(100L, producto.getIdProducto());
+        Assertions.assertEquals("ron", producto.getNombre());
+
+
+
+    }
 
 }

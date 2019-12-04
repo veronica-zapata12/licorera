@@ -47,12 +47,6 @@ public class RepositorioProductoPostgres implements RepositorioProducto {
 
     }
 
-    @Override
-    public Double obtenerValorporNombre(String nombre) {
-        ProductoEntity productoEntity = productoRepositorioJPA.buscarpornombre(nombre);
-        Producto producto = modelMapper.map(productoEntity, Producto.class);
-        return producto.getValor();
-    }
 
     @Override
     public List<ProductoDto> obtenerProductos() {
