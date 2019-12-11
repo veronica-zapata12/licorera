@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-12-05T13:42:50" hostname="VERONICA-ZAPATA" time="0.019">
+  <properties/>
+  <testcase name="valorInvalido()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" time="0.001"/>
+  <testcase name="setter()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" time="0.0"/>
+  <testcase name="valorValido()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" time="0.0"/>
+  <testcase name="NombreNulo()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" time="0.014"/>
+  <testcase name="nombreValido()" classname="com.ceiba.licorera.TestDominio.Producto.ProductoTest.ProductoTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

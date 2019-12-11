@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-12-05T13:42:50" hostname="VERONICA-ZAPATA" time="0.049">
+  <properties/>
+  <testcase name="getters()" classname="com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest" time="0.002"/>
+  <testcase name="obtenerFacturas()" classname="com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest" time="0.043"/>
+  <testcase name="obtenerunafactura()" classname="com.ceiba.licorera.TestDominio.Factura.FacturaServicioConsultarTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

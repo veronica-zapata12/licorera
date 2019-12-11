@@ -82,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TestFactura.horaMala">
+  <component name="RunManager" selected="Gradle.run">
     <configuration name="ControladorFacturaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -305,26 +305,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Factura/DetalleFacturaServicioConsultarTest.java</url>
           <line>36</line>
           <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Producto/ProductoTest/ProductoTest.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Producto/ProductoTest/ProductoTest.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="173" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Producto/ProductoTest/ProductoTest.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/ceiba/licorera/TestDominio/Producto/ProductoTest/ProductoTest.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="176" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
